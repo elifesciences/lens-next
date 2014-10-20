@@ -3,7 +3,7 @@ module.exports = [
     source: "http://dx.doi.org/10.7554/eLife.00778",
     target: "http://dx.doi.org/10.1016/j.immuni.2011.09.013",
     type: 'key-reference',
-    description: 'This blaaaa is choosen as a key-reference because it is so awesome.',
+    description: 'This <b>blaaaa</b> is choosen as a <i>key-reference</i> because it is so awesome.',
     creator: ["Mickey Mouse"]
   },
   {

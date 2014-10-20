@@ -15,13 +15,15 @@ KeyReferenceExtension.Prototype = function() {
     }
     $keyRefEl.empty();
 
-    var $descrEl = $('<div>').addClass('.description');
-    $descrEl.text(this.keyRefRelationship.description);
-    var $creatorEl = $('<div>').addClass('.creator');
-    $creatorEl.text(this.keyRefRelationship.creator.join(','));
+    var $creatorEl = $('<div>').addClass('creator');
+    $creatorEl.text("Recommended by " +this.keyRefRelationship.creator.join(','));
 
-    $keyRefEl.append($descrEl);
+    var $descrEl = $('<div>').addClass('description');
+    $descrEl.html(this.keyRefRelationship.description);
+
+
     $keyRefEl.append($creatorEl);
+    $keyRefEl.append($descrEl);
   };
 };
 
