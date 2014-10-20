@@ -23,7 +23,6 @@ KeyReferenceExtension.Prototype = function() {
     $keyRefEl.append($descrEl);
     $keyRefEl.append($creatorEl);
   };
-
 };
 
 KeyReferenceExtension.prototype = new KeyReferenceExtension.Prototype();

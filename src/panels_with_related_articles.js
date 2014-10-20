@@ -3,6 +3,8 @@ var relationshipsService = require('./relationships_service').newInstance();
 var RelatedArticlesView = require('./related_articles_view');
 var LensArticle = require('lens-article');
 var panelSpec = require('lens').defaultPanelSpecification;
+var ReferencesRenderer = require("./references_renderer");
+
 // add a panel for related articles
 panelSpec.related_articles = {
   type: 'resource',
@@ -18,4 +20,17 @@ panelSpec.related_articles = {
     return new RelatedArticlesView(docCtrl.getDocument(), LensArticle.Renderer, relationshipsService);
   }
 };
+
+// Use custom renderer for references (key reference support)
+panelSpec.citations = {
+  type: 'resource',
+  label: 'References',
+  title: 'References',
+  icon: 'icon-link',
+  references: ['citation_reference'],
+  createRenderer: function(name, docCtrl) {
+    return new ReferencesRenderer(docCtrl, relationshipsService);
+  }
+};
+
 module.exports = panelSpec;

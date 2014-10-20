@@ -14,9 +14,10 @@ RelationshipsService.Prototype = function() {
         cb(null, result);
       }, 1000);
     };
+
     for (var i = 0; i < this.data.length; i++) {
       var d = this.data[i];
-      if (d.relationship_type === type && source === d.source && d.target === target) {
+      if (d.type === type && source === d.source && d.target === target) {
         return _callback(d);
       }
     }

@@ -1,4 +1,4 @@
-var ResourceRenderer = require('../resource_renderer');
+var ResourceRenderer = require('lens').ResourceRenderer;
 var KeyReferenceExtension = require('./key_reference_extension');
 
 var ReferencesRenderer = function(docCtrl, relationships) {
@@ -13,7 +13,8 @@ ReferencesRenderer.Prototype = function() {
     var pubInfo = this.docCtrl.get('publication_info');
     var source = pubInfo.doi;
     var target = node.doi;
-    // check if there are
+
+    // check if there are key references
     this.relationships.getRelationShip("key-reference", source, target, function(err, keyRefRel) {
     	if (err) {
     		console.error(err);
