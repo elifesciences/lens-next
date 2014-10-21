@@ -8,6 +8,11 @@ var RelationshipsService = function() {
 
 RelationshipsService.Prototype = function() {
 
+  // Query for a relationship by given type, source and target properties
+  // ---------------
+  // 
+  // Used by key reference (see references_renderer.js)
+
   this.getRelationShip = function(type, source, target, cb) {
     var _callback = function(result) {
       window.setTimeout(function() {
