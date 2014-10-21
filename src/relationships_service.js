@@ -24,48 +24,33 @@ RelationshipsService.Prototype = function() {
     cb();
   };
 
+  // Get all incoming relationships for a particular DOI
+  // ---------------
+  // 
+  // Example: For research article http://dx.doi.org/10.7554/eLife.03665 give me related articles:
+  // Result: ["http://dx.doi.org/10.7554/eLife.00461"]
+
   this.getRelationshipsForDOI = function(doi, cb) {
     var rels = [];
-
     var target = articleMetaData[doi];
     var source;
 
-    if (!target) {
-      return cb();
-    }
+    if (!target) return cb();
 
     for (var i = 0; i < this.data.length; i++) {
       var d = this.data[i];
-      if (d.type === 'insight' || d.type === 'advance' || d.type === 'key-reference') {
-        if (d.target !== doi)  continue;
-        source = articleMetaData[d.source];
-        if (!source) throw new Error("No meta data found for " + d.source);
-        rels.push({
-          type: 'article_relationship',
-          id: util.uuid(),
-          relationship_type: d.type,
-          source: source,
-          target: target,
-          description: d.description,
-          creator: d.creator
-        });
-      } else if (d.type === 'co-published' && d.target.indexOf(doi) >= 0) {
-        for (var j = 0; j < d.target.length; j++) {
-          var doi2 = d.target[j];
-          if (doi2 === doi) continue;
-          source = articleMetaData[doi2];
-          if (!source) throw new Error("No meta data found for " + d.source);
-          rels.push({
-            type: 'article_relationship',
-            id: util.uuid(),
-            relationship_type: d.type,
-            source: source,
-            target: target,
-            description: d.description,
-            creator: d.creator
-          });
-        }
-      }
+      if (d.target !== doi) continue;
+      source = articleMetaData[d.source];
+      if (!source) throw new Error("No meta data found for " + d.source);
+      rels.push({
+        type: 'article_relationship',
+        id: util.uuid(),
+        relationship_type: d.type,
+        source: source,
+        target: target,
+        description: d.description,
+        creator: d.creator
+      });
     }
     window.setTimeout(function() {
       cb(null, rels);
