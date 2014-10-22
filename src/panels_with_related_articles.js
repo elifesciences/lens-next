@@ -35,6 +35,6 @@ panelSpec.panels.citations = {
   }
 };
 
-panelSpec.panelOrder = ["toc", "figures", "citations", "definitions", "related_articles", "info"];
+panelSpec.panelOrder = ["content", "toc", "figures", "citations", "definitions", "related_articles", "info"];
 
 module.exports = panelSpec;
