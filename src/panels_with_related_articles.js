@@ -6,7 +6,7 @@ var panelSpec = require('lens').defaultPanelSpecification;
 var ReferencesRenderer = require("./references_renderer");
 
 // add a panel for related articles
-panelSpec.related_articles = {
+panelSpec.panels.related_articles = {
   type: 'resource',
   label: 'Related',
   title: 'Related',
@@ -24,7 +24,7 @@ panelSpec.related_articles = {
 };
 
 // Use custom renderer for references (key reference support)
-panelSpec.citations = {
+panelSpec.panels.citations = {
   type: 'resource',
   label: 'References',
   title: 'References',
@@ -34,5 +34,7 @@ panelSpec.citations = {
     return new ReferencesRenderer(docCtrl, articleDataService);
   }
 };
+
+panelSpec.panelOrder = ["toc", "figures", "citations", "definitions", "related_articles", "info"];
 
 module.exports = panelSpec;
