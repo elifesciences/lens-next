@@ -2,13 +2,13 @@
 var View = require('substance-application').View;
 var ArticleRelationship = require('lens-article').nodeTypes['article_relationship'];
 
-var RelatedArticlesView = function(document, viewFactory, relationships) {
+var RelatedArticlesView = function(document, viewFactory, articleDataService) {
   View.call(this);
   this.$content = $('<div>').addClass('nodes');
   this.$el.addClass('surface related_articles')
   this.document = document;
   this.viewFactory = viewFactory;
-  this.relationships = relationships;
+  this.articleDataService = articleDataService;
   // HACK: to make this operational with outline
   this.doc = {
     container: {
@@ -25,7 +25,7 @@ RelatedArticlesView.Prototype = function() {
     var doi = this.document.get('publication_info').doi;
 
     var self = this;
-    this.relationships.getRelationshipsForDOI(doi, function(err, rels) {
+    this.articleDataService.getRelatedArticles(doi, function(err, rels) {
       if (err) {
         console.error("Could not retrieve related articles:", err);
         return;

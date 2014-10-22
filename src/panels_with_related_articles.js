@@ -1,5 +1,5 @@
 var Controller = require("substance-application").Controller;
-var relationshipsService = require('./relationships_service').newInstance();
+var articleDataService = require('./article_data_service').newInstance();
 var RelatedArticlesView = require('./related_articles_view');
 var LensArticle = require('lens-article');
 var panelSpec = require('lens').defaultPanelSpecification;
@@ -17,7 +17,7 @@ panelSpec.related_articles = {
     return new Controller();
   },
   createPanelView: function(docCtrl) {
-    return new RelatedArticlesView(docCtrl.getDocument(), LensArticle.Renderer, relationshipsService);
+    return new RelatedArticlesView(docCtrl.getDocument(), LensArticle.Renderer, articleDataService);
   }
 };
 
@@ -29,7 +29,7 @@ panelSpec.citations = {
   icon: 'icon-link',
   references: ['citation_reference'],
   createRenderer: function(name, docCtrl) {
-    return new ReferencesRenderer(docCtrl, relationshipsService);
+    return new ReferencesRenderer(docCtrl, articleDataService);
   }
 };
 

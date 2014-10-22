@@ -46,5 +46,11 @@ module.exports = {
     authors: ["Geoff P O'Donoghue", "Rafal M Pielak", "Alexander A Smoligovets", "Jenny J Lin", "Jay T Groves"],
     url: "/doc.html?url=https://s3.amazonaws.com/elife-cdn/elife-articles/00778/elife00778.xml#related_articles/all",
     published_on: "2014-08-13"
+  },
+  "http://dx.doi.org/10.1016/j.immuni.2011.09.013": {
+    title: "Modeling T Cell Antigen Discrimination Based on Feedback Control of Digital ERK Responses",
+    authors: ["Grégoire Altan-Bonnet", "Ronald N Germain"],
+    url: "http://dx.doi.org/10.1371/journal.pbio.0030356",
+    published_on: "2005-10-25"
   }
 };

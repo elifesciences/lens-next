@@ -16,7 +16,7 @@ KeyReferenceExtension.Prototype = function() {
     $keyRefEl.empty();
 
     var $creatorEl = $('<div>').addClass('creator');
-    $creatorEl.text("Recommended by " +this.keyRefRelationship.creator.join(','));
+    $creatorEl.text("Recommended by " +(this.keyRefRelationship.creator || "Author"));
 
     var $descrEl = $('<div>').addClass('description');
     $descrEl.html(this.keyRefRelationship.description);
