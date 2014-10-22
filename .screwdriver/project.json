@@ -117,11 +117,11 @@
     "styles/lens.css":  "node_modules/lens/styles/lens.css"
   },
   "assets": {
-    "node_modules/lens/lib/jquery-2.0.3.min.js": "lib/jquery-2.0.3.min.js",
-    "node_modules/lens/lib/jquery-2.0.3.min.map": "lib/jquery-2.0.3.min.map",
-    "node_modules/lens/styles/font-awesome.css": "styles/font-awesome.css",
-    "node_modules/lens/styles/fonts": "styles/fonts",
-    "node_modules/lens/styles/elife.png": "styles/elife.png"
+    "lib/jquery-2.0.3.min.js": "node_modules/lens/lib/jquery-2.0.3.min.js",
+    "lib/jquery-2.0.3.min.map": "node_modules/lens/lib/jquery-2.0.3.min.map",
+    "styles/font-awesome.css": "node_modules/lens/styles/font-awesome.css",
+    "styles/fonts": "node_modules/lens/styles/fonts",
+    "styles/elife.png": "node_modules/lens/styles/elife.png"
   },
   "bundle": {
     "name": "lens-next",

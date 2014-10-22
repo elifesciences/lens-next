@@ -46,7 +46,7 @@ new CJSServer(app, __dirname, 'lens-next')
   .page('/doc.html');
 
 // Serve assets with alias as configured in project.json (~dist like setup)
-_.each(config.assets, function(distPath, srcPath) {
+_.each(config.assets, function(srcPath, distPath) {
   var absPath = path.join(__dirname, srcPath);
   var route = "/" + distPath;
   //console.log("Adding route for asset", route, "->", absPath);
