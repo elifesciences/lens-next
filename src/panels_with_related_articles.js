@@ -11,7 +11,9 @@ panelSpec.related_articles = {
   label: 'Related',
   title: 'Related',
   icon: 'icon-external-link',
-  shouldBeVisible: function() { return true; },
+  shouldBeVisible: function() { 
+    return true;
+  },
   createPanelController: function() {
     // just a stub controller
     return new Controller();

@@ -12,8 +12,8 @@ ArticleDataService.Prototype = function() {
   // 
 
   this.getKeyReferences = function(articleDOI, refDOI, cb) {
+    if (!this.keyReferences[articleDOI]) return cb(null, {});
     var keyRefs = this.keyReferences[articleDOI][refDOI];
-    console.log(keyRefs);
     window.setTimeout(function() {
       cb(null, keyRefs);
     }, 1000);
