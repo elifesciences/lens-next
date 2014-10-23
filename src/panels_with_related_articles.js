@@ -11,7 +11,7 @@ panelSpec.panels.related_articles = {
   title: 'Related',
   icon: 'icon-external-link',
   createPanelView: function(doc) {
-    return new RelatedArticlesView(doc, panelSpec.related_articles, LensArticle.Renderer, articleDataService);
+    return new RelatedArticlesView(doc, panelSpec.panels.related_articles, LensArticle.Renderer, articleDataService);
   }
 };
 
