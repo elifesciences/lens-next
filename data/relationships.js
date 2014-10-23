@@ -79,6 +79,80 @@ module.exports = {
         "published_on": "2014-04-15"
       }
     }
+  ],
+
+  // Registered Report Usecase 2 - registered report pointing to original article and replication study  
+  "http://dx.doi.org/10.7554/eLife.03696": [
+    {
+      "id": "relationship_1",
+      "relationship_type": 'original work',
+      "description": 'This paper was selected as part of the Cancer Biology Replication study, for more information see <a href="reproducability.org">the reproducablity project</a>',
+      "creators": [{"name": "Donald Duck", "orcid": "0000-2342-5674-0043"}],
+      "created_at": "2014-22-21T11:04:11.547Z",
+      "meta": {
+      },
+      "related_article": {
+        "doi": "http://dx.doi.org/10.1038/nature10599",
+        "title": "Senescence surveillance of pre-malignant hepatocytes limits liver cancer development",
+        "authors": ["Kang T.W.", "Yevsa T.", "Woller N.","Hoenicke L.", "Wuestefeld T.", "Dauch D.", "Hohmeyer A.", "Gereke M.", "Rudalska R.", "Potapova A.", "Iken M.", "Vucur M.", "Weiss S.", "Heikenwalder M.", "Khan S.", "Gil J.", "Bruder D.", "Manns M.", "Schirmacher P.", "Tacke F.", "Ott M.", "Luedde T.", "Longerich T.", "Kubicka S.", "Zender L."],
+        "url": "http://dx.doi.org/10.1038/nature10599",
+        "published_on": "2010-07-14"
+      }
+    },
+    {
+      "id": "relationship_2",
+      "relationship_type": 'replication study',
+      "description": 'This is the full replication report for the original work listed as part of the <a href="reproducability.org">the reproducablity project</a>',
+      "creators": [{"name": "Donald Duck", "orcid": "0000-2342-5674-0043"}],
+      "created_at": "2014-10-21T11:04:11.547Z",
+      "meta": {
+     
+      },
+      "related_article": {
+        "doi": "http://dx.doi.org/10.7554/eLife.03251",
+        "title": "Replication study of original paper: Senescence surveillance of pre-malignant hepatocytes limits liver cancer development",
+        "authors": ["Replication Study Group", "Pheonix Lab", "T. Peterson"],
+        "url": "/doc.html?url=https://s3.amazonaws.com/elife-cdn/elife-articles/03251/elife03251.xml",
+        "published_on": "2014-12-23"
+      }
+    }
+  ],
+
+  // Registered Report Usecase 3 - replication study  pointing to original article and registered report
+  "http://dx.doi.org/10.7554/eLife.03251": [
+    {
+      "id": "relationship_1",
+      "relationship_type": 'original work',
+      "description": 'This paper was selected as part of the Cancer Biology Replication study, for more information see <a href="reproducability.org">the reproducablity project</a>.',
+      "creators": [{"name": "Donald Duck", "orcid": "0000-2342-5674-0043"}],
+      "created_at": "2014-12-23T11:04:11.547Z",
+      "meta": {
+   
+      },
+      "related_article": {
+        "doi": "http://dx.doi.org/10.1038/nature10599",
+        "title": "Senescence surveillance of pre-malignant hepatocytes limits liver cancer development",
+        "authors": ["Kang T.W.", "Yevsa T.", "Woller N.","Hoenicke L.", "Wuestefeld T.", "Dauch D.", "Hohmeyer A.", "Gereke M.", "Rudalska R.", "Potapova A.", "Iken M.", "Vucur M.", "Weiss S.", "Heikenwalder M.", "Khan S.", "Gil J.", "Bruder D.", "Manns M.", "Schirmacher P.", "Tacke F.", "Ott M.", "Luedde T.", "Longerich T.", "Kubicka S.", "Zender L."],
+        "url": "http://dx.doi.org/10.1038/nature10599",
+        "published_on": "2010-07-14"
+      }
+    },
+    {
+      "id": "relationship_2",
+      "relationship_type": 'registered report',
+      "description": 'This registered report outlines the approach agreed prior to undertaking this replications study as part of <a href="reproducability.org">the reproducablity project</a>.',
+      "creators": [{"name": "Donald Duck", "orcid": "0000-2342-5674-0043"}],
+      "created_at": "2014-12-23T11:04:11.547Z",
+      "meta": {
+     
+      },
+      "related_article": {
+        "doi": "http://dx.doi.org/10.7554/eLife.03696",
+        "title": "Registered report for the replication of: Senescence surveillance of pre-malignant hepatocytes limits liver cancer development",
+        "authors": ["Replication Study Group", "Pheonix Lab", "T. Peterson"],
+        "url": "/doc.html?url=https://s3.amazonaws.com/elife-cdn/elife-articles/03696/elife03696.xml",
+        "published_on": "2014-12-23"
+      }
+    }
   ]
 };
-

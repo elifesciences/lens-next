@@ -23,7 +23,15 @@ module.exports = [
       {
         "url": "https://s3.amazonaws.com/elife-cdn/elife-articles/00778/elife00778.xml",
         "comment": "Has key references (1st and 2nd ref in references panel)"
+      },
+      {
+        "url": "https://s3.amazonaws.com/elife-cdn/elife-articles/03696/elife03696.xml",
+        "comment": "Registered Report Usecase 2 - registered report pointing to original article and replication study"
+      },
+      {
+        "url": "https://s3.amazonaws.com/elife-cdn/elife-articles/03251/elife03251.xml",
+        "comment": "Registered Report Usecase 3 - replication study pointing to original article and registered report"
       }
     ]
   }
-]
+];
