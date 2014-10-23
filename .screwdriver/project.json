@@ -124,7 +124,7 @@
     "styles/elife.png": "node_modules/lens/styles/elife.png"
   },
   "bundle": {
-    "name": "lens-next",
+    "name": "lens",
     "folder": "./dist",
     "source": "./boot.js",
     "index": "./index.html",
