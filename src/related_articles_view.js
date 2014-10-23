@@ -1,20 +1,17 @@
 
-var View = require('substance-application').View;
+var PanelView = require('lens').PanelView;
 var ArticleRelationship = require('lens-article').nodeTypes['article_relationship'];
 
-var RelatedArticlesView = function(document, viewFactory, articleDataService) {
-  View.call(this);
-  this.$content = $('<div>').addClass('nodes');
-  this.$el.addClass('surface related_articles')
+var RelatedArticlesView = function(document, config, viewFactory, articleDataService) {
+  PanelView.call(this, document, config);
+
   this.document = document;
   this.viewFactory = viewFactory;
   this.articleDataService = articleDataService;
-  // HACK: to make this operational with outline
-  this.doc = {
-    container: {
-      getTopLevelNodes: function() { return []; }
-    }
-  };
+
+  this.$content = $('<div>').addClass('nodes');
+  // TODO: this should not have class 'surface'
+  this.$el.addClass('surface related_articles');
   this.$el.append(this.$content);
 };
 
@@ -47,7 +44,8 @@ RelatedArticlesView.Prototype = function() {
 
 };
 
-RelatedArticlesView.Prototype.prototype = View.prototype;
+RelatedArticlesView.Prototype.prototype = PanelView.prototype;
 RelatedArticlesView.prototype = new RelatedArticlesView.Prototype();
+RelatedArticlesView.prototype.constructor = RelatedArticlesView;
 
 module.exports = RelatedArticlesView;
