@@ -19,7 +19,8 @@ ReferencesRenderer.Prototype = function() {
     	if (err) {
     		console.error(err);
     		return;
-    	} else if (keyRefRel) {
+    	}
+      if (keyRefRel && Object.keys(keyRefRel).length > 0) {
         var keyRefExt = new KeyReferenceExtension(nodeView, keyRefRel);
         keyRefExt.render();
       }
