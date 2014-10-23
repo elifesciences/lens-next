@@ -16,7 +16,7 @@ ArticleDataService.Prototype = function() {
     var keyRefs = this.keyReferences[articleDOI][refDOI];
     window.setTimeout(function() {
       cb(null, keyRefs);
-    }, 1000);
+    }, 3000);
   };
 
   // Get all article relationships for a particular DOI
@@ -28,7 +28,7 @@ ArticleDataService.Prototype = function() {
 
     window.setTimeout(function() {
       cb(null, rels);
-    }, 1000);
+    }, 3000);
   };
 };
 

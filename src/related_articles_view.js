@@ -12,6 +12,9 @@ var RelatedArticlesView = function(document, config, viewFactory, articleDataSer
   this.$content = $('<div>').addClass('nodes');
   // TODO: this should not have class 'surface'
   this.$el.addClass('surface related_articles');
+
+  // Hide toggle on contruction, it will be displayed once data has arrived
+  this.hideToggle();
   this.$el.append(this.$content);
 };
 
@@ -29,11 +32,11 @@ RelatedArticlesView.Prototype = function() {
       }
       if (rels && rels.length > 0) self.renderRelatedArticles(rels);
     });
-
     return this;
   };
 
   this.renderRelatedArticles = function(rels) {
+    this.showToggle();
     for (var i = 0; i < rels.length; i++) {
       var rel = new ArticleRelationship.Model(rels[i], this.document);
       var view = new ArticleRelationship.View(rel, this.viewFactory);
