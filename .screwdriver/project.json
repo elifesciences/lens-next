@@ -68,12 +68,12 @@
     {
       "repository": "https://github.com/elifesciences/lens.git",
       "folder": "node_modules/lens",
-      "branch": "reader_refactor"
+      "branch": "lens_next"
     },
     {
       "repository": "https://github.com/elifesciences/lens-next.git",
       "folder": ".",
-      "branch": "reader_refactor"
+      "branch": "master"
     }
   ],
   "node_modules": {
