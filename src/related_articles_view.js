@@ -1,12 +1,11 @@
 
 var PanelView = require('lens').PanelView;
-var ArticleRelationship = require('lens-article').nodeTypes['article_relationship'];
+var ArticleRelationshipView = require('./article_relationship_view');
 
-var RelatedArticlesView = function(document, config, viewFactory, articleDataService) {
+var RelatedArticlesView = function(document, config, articleDataService) {
   PanelView.call(this, document, config);
 
   this.document = document;
-  this.viewFactory = viewFactory;
   this.articleDataService = articleDataService;
 
   this.$content = $('<div>').addClass('nodes');
@@ -38,10 +37,9 @@ RelatedArticlesView.Prototype = function() {
   this.renderRelatedArticles = function(rels) {
     this.showToggle();
     for (var i = 0; i < rels.length; i++) {
-      var rel = new ArticleRelationship.Model(rels[i], this.document);
-      var view = new ArticleRelationship.View(rel, this.viewFactory);
-      view.render();
-      this.$content[0].appendChild(view.el);
+      var rel = rels[i];
+      var view = new ArticleRelationshipView(rel);
+      this.$content[0].appendChild(view.render().el);
     }
   };
 

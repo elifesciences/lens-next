@@ -4,9 +4,13 @@ var LensNext = function(config) {
   Lens.call(this, config);
 };
 
+var panelSpecs = require('lens').defaultPanelSpecification;
+panelSpecs.panels.related_articles = require('./related_articles_panel');
+panelSpecs.panels.citations = require('./keyreferences_panel');
+panelSpecs.panelOrder = ["toc", "figures", "citations", "definitions", "related_articles", "info"];
+
 LensNext.Prototype = function() {
   this.getPanelFactory = function() {
-    var panelSpecs = require('./panels_with_related_articles');
     return new Lens.Reader.PanelFactory(panelSpecs);
   };
 };

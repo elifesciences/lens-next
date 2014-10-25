@@ -9,7 +9,7 @@ ArticleDataService.Prototype = function() {
 
   // Get all key references for a particular article
   // ---------------
-  // 
+  //
 
   this.getKeyReferences = function(articleDOI, refDOI, cb) {
     if (!this.keyReferences[articleDOI]) return cb(null, {});
@@ -21,7 +21,7 @@ ArticleDataService.Prototype = function() {
 
   // Get all article relationships for a particular DOI
   // ---------------
-  // 
+  //
 
   this.getRelatedArticles = function(doi, cb) {
     var rels = this.relationships[doi];
@@ -34,8 +34,10 @@ ArticleDataService.Prototype = function() {
 
 ArticleDataService.prototype = new ArticleDataService.Prototype();
 
-ArticleDataService.newInstance = function() {
-  return new ArticleDataService();
+var __instance__ = null;
+ArticleDataService.instance = function() {
+  if (!__instance__) __instance__ = new ArticleDataService();
+  return __instance__;
 };
 
 module.exports = ArticleDataService;

@@ -1,19 +1,20 @@
-var ResourceRenderer = require('lens').ResourceRenderer;
+var ResourcePanelViewFactory = require('lens').ResourcePanelViewFactory;
 var KeyReferenceExtension = require('./key_reference_extension');
 
-var ReferencesRenderer = function(docCtrl, articleDataService) {
-  ResourceRenderer.call(this, docCtrl);
+var ReferencesRenderer = function(doc, articleDataService) {
+  ResourcePanelViewFactory.call(this, doc.nodeTypes);
+  this.doc = doc;
 	this.articleDataService = articleDataService;
 };
 
 ReferencesRenderer.Prototype = function() {
 
-  this.renderNodeView = function(node) {
-  	var nodeView = ResourceRenderer.prototype.renderNodeView.call(this, node);
-    var pubInfo = this.docCtrl.get('publication_info');
+  this.createView = function(node, options, type) {
+    var nodeView = ResourcePanelViewFactory.prototype.createView.call(this, node, options, type);
+
+    var pubInfo = this.doc.get('publication_info');
     var referenceDOI = node.doi;
     var articleDOI = pubInfo.doi;
-
     // check if there are key references
     this.articleDataService.getKeyReferences(articleDOI, referenceDOI, function(err, keyRefRel) {
     	if (err) {
@@ -29,7 +30,7 @@ ReferencesRenderer.Prototype = function() {
   };
 };
 
-ReferencesRenderer.Prototype.prototype = ResourceRenderer.prototype;
+ReferencesRenderer.Prototype.prototype = ResourcePanelViewFactory.prototype;
 ReferencesRenderer.prototype = new ReferencesRenderer.Prototype();
 
 module.exports = ReferencesRenderer;
