@@ -1,4 +1,4 @@
-var articleDataService = require('./article_data_service').instance();
+var articleDataService = require('../article_data_service').instance();
 var RelatedArticlesView = require('./related_articles_view');
 
 var panelSpec = {

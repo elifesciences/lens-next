@@ -97,20 +97,19 @@
     "styles/nodes/image.css": "node_modules/substance-article/nodes/image/image.css",
     "styles/nodes/formula.css": "node_modules/substance-article/nodes/formula/formula.css",
     "styles/nodes/codeblock.css": "node_modules/substance-article/nodes/codeblock/codeblock.css",
-
     "styles/nodes/cover.css": "node_modules/lens-article/nodes/cover/cover.css",
     "styles/nodes/supplement.css": "node_modules/lens-article/nodes/supplement/supplement.css",
     "styles/nodes/box.css": "node_modules/lens-article/nodes/box/box.css",
     "styles/nodes/citation.css": "node_modules/lens-article/nodes/citation/citation.css",
     "styles/nodes/definition.css": "node_modules/lens-article/nodes/definition/definition.css",
-    "styles/nodes/article_relationship.css": "node_modules/lens-article/nodes/article_relationship/article_relationship.css",
     "styles/nodes/figure.css": "node_modules/lens-article/nodes/figure/figure.css",
     "styles/nodes/table.css": "node_modules/lens-article/nodes/table/table.css",
     "styles/nodes/video.css": "node_modules/lens-article/nodes/video/video.css",
     "styles/nodes/caption.css": "node_modules/lens-article/nodes/caption/caption.css",
-
     "styles/nodes/contributor.css": "node_modules/lens-article/nodes/contributor/contributor.css",
     "styles/nodes/publication_info.css": "node_modules/lens-article/nodes/publication_info/publication_info.css",
+
+    "styles/article_relationship.css": "src/related_articles/article_relationship.css",
 
     "styles/toc.css": "node_modules/substance-toc/toc.css",
     "styles/reader.css": "node_modules/lens/styles/reader.css",

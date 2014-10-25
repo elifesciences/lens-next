@@ -1,5 +1,5 @@
 var ReferencesRenderer = require("./references_renderer");
-var articleDataService = require('./article_data_service').instance();
+var articleDataService = require('../article_data_service').instance();
 
 // Use custom renderer for references (key reference support)
 var panelSpec = {
