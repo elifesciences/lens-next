@@ -90,12 +90,14 @@
     "styles/nodes/caption.css": "node_modules/lens-article/nodes/caption/caption.css",
     "styles/nodes/contributor.css": "node_modules/lens-article/nodes/contributor/contributor.css",
     "styles/nodes/publication_info.css": "node_modules/lens-article/nodes/publication_info/publication_info.css",
-    "styles/article_relationship.css": "src/related_articles/article_relationship.css",
+    "styles/nodes/footnote.css": "node_modules/lens-article/nodes/footnote/footnote.css",
     "styles/toc.css": "node_modules/substance-toc/toc.css",
     "styles/surface.css": "node_modules/lens/styles/surface.css",
     "styles/lens-outline.css": "node_modules/lens-outline/outline.css",
     "styles/reader.css": "node_modules/lens/styles/reader.css",
-    "styles/lens.css":  "node_modules/lens/styles/lens.css"
+    "styles/lens.css":  "node_modules/lens/styles/lens.css",
+
+    "styles/article_relationship.css": "src/related_articles/article_relationship.css"
   },
   "assets": {
     "lib/jquery-2.0.3.min.js": "node_modules/lens/lib/jquery-2.0.3.min.js",
