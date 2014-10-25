@@ -103,7 +103,7 @@
     "styles/nodes/citation.css": "node_modules/lens-article/nodes/citation/citation.css",
     "styles/nodes/definition.css": "node_modules/lens-article/nodes/definition/definition.css",
     "styles/nodes/figure.css": "node_modules/lens-article/nodes/figure/figure.css",
-    "styles/nodes/table.css": "node_modules/lens-article/nodes/table/table.css",
+    "styles/nodes/html_table.css": "node_modules/lens-article/nodes/html_table/html_table.css",
     "styles/nodes/video.css": "node_modules/lens-article/nodes/video/video.css",
     "styles/nodes/caption.css": "node_modules/lens-article/nodes/caption/caption.css",
     "styles/nodes/contributor.css": "node_modules/lens-article/nodes/contributor/contributor.css",
@@ -120,13 +120,14 @@
     "lib/jquery-2.0.3.min.map": "node_modules/lens/lib/jquery-2.0.3.min.map",
     "styles/font-awesome.css": "node_modules/lens/styles/font-awesome.css",
     "styles/fonts": "node_modules/lens/styles/fonts",
-    "styles/elife.png": "node_modules/lens/styles/elife.png"
+    "styles/elife.png": "node_modules/lens/styles/elife.png",
+    "doc.html": "doc.html"
   },
   "bundle": {
     "name": "lens",
     "folder": "./dist",
     "source": "./boot.js",
-    "index": "./index.html",
+    "index": "./doc.html",
     "ignores": [
       "substance-operator",
       "substance-chronicle",

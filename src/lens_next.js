@@ -4,6 +4,8 @@ var LensNext = function(config) {
   Lens.call(this, config);
 };
 
+Lens.ResourcePanelViewFactory.enableZoom = true;
+
 var panelSpecs = require('lens').defaultPanelSpecification;
 panelSpecs.panels.related_articles = require('./related_articles/related_articles_panel');
 panelSpecs.panels.citations = require('./key_references/key_references_panel');

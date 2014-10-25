@@ -24,6 +24,9 @@ var SAMPLESET = require('./sampleset');
 app.get("/",
   function(req, res, next) {
     ejs.renderFile(__dirname+'/sampleset.ejs', { sampleset: SAMPLESET }, function(err, result) {
+      if (fs.existsSync('dist')) {
+        fs.writeFileSync(path.join(__dirname, 'dist', 'index.html'), result);
+      }
       if (err) return next(err);
       res.send(result);
     });
