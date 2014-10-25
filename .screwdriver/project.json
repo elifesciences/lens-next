@@ -21,11 +21,6 @@
       "branch": "lens_next"
     },
     {
-      "repository": "https://github.com/substance/article.git",
-      "folder": "node_modules/substance-article",
-      "branch": "lens"
-    },
-    {
       "repository": "https://github.com/substance/nodes.git",
       "folder": "node_modules/substance-nodes",
       "branch": "lens"
