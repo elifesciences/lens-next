@@ -33,7 +33,7 @@
     {
       "repository": "https://github.com/elifesciences/lens-outline.git",
       "folder": "node_modules/lens-outline",
-      "branch": "master"
+      "branch": "lens-next"
     },
     {
       "repository": "https://github.com/substance/toc.git",
@@ -43,7 +43,7 @@
     {
       "repository": "https://github.com/elifesciences/lens-converter.git",
       "folder": "node_modules/lens-converter",
-      "branch": "master"
+      "branch": "lens-next"
     },
     {
       "repository": "https://github.com/substance/regexp.git",
