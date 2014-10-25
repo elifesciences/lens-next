@@ -34,10 +34,10 @@ app.get("/",
 );
 
 var config = require("./.screwdriver/project.json");
-new CJSServer(app, __dirname, 'lens-next')
+new CJSServer(app, __dirname, 'lens')
   // ATTENTION: the second argument is the script which is resembled by injecting a list
   // of script tags instead. It must be exactly the same string which is used in the script src.
-  .scripts('./boot.js', 'lens-next.js', {
+  .scripts('./boot.js', 'lens.js', {
     ignores: [
       'substance-commander',
       'substance-chronicle',
