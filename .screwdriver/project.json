@@ -46,11 +46,6 @@
       "branch": "lens"
     },
     {
-      "repository": "https://github.com/substance/surface.git",
-      "folder": "node_modules/substance-surface",
-      "branch": "lens"
-    },
-    {
       "repository": "https://github.com/substance/util.git",
       "folder": "node_modules/substance-util",
       "branch": "lens"
