@@ -21,7 +21,7 @@ var ArticleRelationshipView = function(relationShip) {
 ArticleRelationshipView.Prototype = function() {
 
   this.render = function() {
-    // TODO: implement CustomView and put this there (CustomView should be in substance-nodes)
+    // TODO: implement CustomView and put this there
     this.content = document.createElement("DIV");
     this.content.classList.add("content");
     this.el.appendChild(this.content);
