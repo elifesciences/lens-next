@@ -1,14 +1,17 @@
-var articleDataService = require('../article_data_service').instance();
-var RelatedArticlesView = require('./related_articles_view');
+"use strict";
 
-var panelSpec = {
+var Panel = require('lens').Panel;
+var articleDataService = require('../article_data_service').instance();
+var RelatedArticlesController = require('./related_articles_controller');
+
+var panel = new Panel({
   type: 'resource',
   label: 'Related',
   title: 'Related',
   icon: 'icon-external-link',
-  createPanelView: function(doc) {
-    return new RelatedArticlesView(doc, panelSpec, articleDataService);
-  }
+});
+panel.createController = function(doc) {
+  return new RelatedArticlesController(doc, this.config, articleDataService);
 };
 
-module.exports = panelSpec;
+module.exports = panel;

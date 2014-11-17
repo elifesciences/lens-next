@@ -6,15 +6,26 @@ var LensNext = function(config) {
 
 Lens.ResourcePanelViewFactory.enableZoom = true;
 
-var panelSpecs = require('lens').defaultPanelSpecification;
-panelSpecs.panels.related_articles = require('./related_articles/related_articles_panel');
-panelSpecs.panels.citations = require('./key_references/key_references_panel');
-panelSpecs.panelOrder = ["toc", "figures", "citations", "definitions", "related_articles", "info"];
+var panels = Lens.getDefaultPanels();
+var relatedArticlesPanel = require('./related_articles/related_articles_panel');
+var extendedReferencesPanel = require('./key_references/key_references_panel');
+
+// replace the references/citations panel
+for (var i = 0; i < panels.length; i++) {
+  if (panels[i].getName() === "citations") {
+    panels.splice(i, 1, extendedReferencesPanel);
+    break;
+  }
+}
+// add related articles panel
+panels.splice(-1, 0, relatedArticlesPanel);
 
 LensNext.Prototype = function() {
-  this.getPanelFactory = function() {
-    return new Lens.Reader.PanelFactory(panelSpecs);
+
+  this.getPanels = function() {
+    return panels.slice(0);
   };
+
 };
 
 LensNext.Prototype.prototype = Lens.prototype;

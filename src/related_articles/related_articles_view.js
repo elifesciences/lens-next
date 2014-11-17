@@ -2,10 +2,9 @@
 var PanelView = require('lens').PanelView;
 var ArticleRelationshipView = require('./article_relationship_view');
 
-var RelatedArticlesView = function(document, config, articleDataService) {
-  PanelView.call(this, document, config);
+var RelatedArticlesView = function(panelCtrl, config, articleDataService) {
+  PanelView.call(this, panelCtrl, config);
 
-  this.document = document;
   this.articleDataService = articleDataService;
 
   this.$content = $('<div>').addClass('nodes');
@@ -21,7 +20,7 @@ RelatedArticlesView.Prototype = function() {
 
   this.render = function() {
     this.$content.empty();
-    var doi = this.document.get('publication_info').doi;
+    var doi = this.getDocument().get('publication_info').doi;
 
     var self = this;
     this.articleDataService.getRelatedArticles(doi, function(err, rels) {

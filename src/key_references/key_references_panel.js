@@ -1,8 +1,10 @@
+"use strict";
+
 var ReferencesRenderer = require("./references_renderer");
 var articleDataService = require('../article_data_service').instance();
+var ContainerPanel = require('lens').ContainerPanel;
 
-// Use custom renderer for references (key reference support)
-var panelSpec = {
+var panel = new ContainerPanel({
   type: 'resource',
   container: 'citations',
   label: 'References',
@@ -12,6 +14,6 @@ var panelSpec = {
   createViewFactory: function(doc) {
     return new ReferencesRenderer(doc, articleDataService);
   }
-};
+});
 
-module.exports = panelSpec;
+module.exports = panel;
