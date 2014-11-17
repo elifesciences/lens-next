@@ -1,10 +1,19 @@
 {
-  "name"          : "lens-next",
-  "description"   : "Advancing eLife Lens.",
-  "url"           : "http://github.com/elifesciences/lens-next",
-  "keywords"      : ["digital documents", "linked-data", "research", "science"],
-  "author"        : "Michael Aufreiter",
-  "contributors"  : ["Oliver Buchtala", "Ian Mulvany"],
+  "name": "lens-next",
+  "version": "1.0.0",
+  "description": "Advancing eLife Lens.",
+  "url": "http://github.com/elifesciences/lens-next",
+  "keywords": [
+    "digital documents",
+    "linked-data",
+    "research",
+    "science"
+  ],
+  "author": "Michael Aufreiter",
+  "contributors": [
+    "Oliver Buchtala",
+    "Ian Mulvany"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/elifesciences/lens-next.git"
@@ -12,20 +21,20 @@
   "dependencies": {
     "underscore": "1.5.x",
     "express": "3.3.x",
-    "ejs": "*",
-    "substance-util": "",
-    "substance-surface": "",
-    "substance-document": "",
-    "substance-data": "",
-    "substance-application": "",
-    "lens-article": "",
-    "lens-outline": "",
-    "lens-converter": ""
+    "ejs": "1.0.x",
+    "substance-application": "git+https://github.com/substance/application.git#lens",
+    "substance-data": "git+https://github.com/substance/data.git#lens",
+    "substance-document": "git+https://github.com/substance/document.git#lens",
+    "lens-article": "git+https://github.com/elifesciences/lens-article.git#lens_next",
+    "lens-outline": "git+https://github.com/elifesciences/lens-outline.git#lens-next",
+    "substance-toc": "git+https://github.com/substance/toc.git#lens",
+    "lens-converter": "git+https://github.com/elifesciences/lens-converter.git#lens-next",
+    "substance-util": "git+https://github.com/substance/util.git#lens",
+    "lens": "git+https://github.com/elifesciences/lens.git#lens_next"
   },
   "devDependencies": {
-    "substance-cjs": "*"
+    "substance-cjs": "git+https://github.com/substance/cjs.git#master"
   },
-  "version": "1.0.0",
   "engines": {
     "node": ">=0.8.x",
     "npm": ">=1.1.x"

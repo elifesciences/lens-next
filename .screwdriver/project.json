@@ -36,11 +36,6 @@
       "branch": "lens-next"
     },
     {
-      "repository": "https://github.com/substance/regexp.git",
-      "folder": "node_modules/substance-regexp",
-      "branch": "lens"
-    },
-    {
       "repository": "https://github.com/substance/util.git",
       "folder": "node_modules/substance-util",
       "branch": "lens"
