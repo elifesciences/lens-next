@@ -6,13 +6,14 @@ var ContainerPanel = require('lens').ContainerPanel;
 
 var panel = new ContainerPanel({
   type: 'resource',
+  name: 'citations',
   container: 'citations',
   label: 'References',
   title: 'References',
   icon: 'icon-link',
   references: ['citation_reference'],
-  createViewFactory: function(doc) {
-    return new ReferencesRenderer(doc, articleDataService);
+  createViewFactory: function(doc, options) {
+    return new ReferencesRenderer(doc, options, articleDataService);
   }
 });
 

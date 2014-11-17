@@ -1,8 +1,8 @@
 var ResourcePanelViewFactory = require('lens').ResourcePanelViewFactory;
 var KeyReferenceExtension = require('./key_reference_extension');
 
-var ReferencesRenderer = function(doc, articleDataService) {
-  ResourcePanelViewFactory.call(this, doc.nodeTypes);
+var ReferencesRenderer = function(doc, options, articleDataService) {
+  ResourcePanelViewFactory.call(this, doc.nodeTypes, options);
   this.doc = doc;
 	this.articleDataService = articleDataService;
 };
