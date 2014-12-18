@@ -1,6 +1,4 @@
-lens-next
+Lens Next
 =========
 
-Lens Next extends Lens with a related articles panel, that pulls in information from an external service (which is currently stubbed).
-
-This work is considered experimental, hence the API's are not stable yet.
+Deprecated repo. Please refer to http://github.com/elifesciences/lens-elife instead. A general integration project (without elife specific parts) can be found at. http://github.com/elifesciences/
